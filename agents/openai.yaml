@@ -1,0 +1,14 @@
+interface:
+  display_name: COC KP Host
+  short_description: Hosts Chinese Call of Cthulhu-style solo/co-op sessions with
+    preset investigators, NPC teammates, dice, and immersive KP narration.
+  primary_color: '#3B2F2F'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
