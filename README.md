@@ -19,6 +19,12 @@ The skill has been tested in short scenarios and is currently being tested in lo
 - Grounded pacing: no option menus unless the player asks for suggestions
 - Continuity tracking for clues, location, time, NPC attitudes, HP, SAN, Luck, and ammo
 
+## Player-Facing Handouts
+
+When a scenario includes safe player-facing material, the KP can send images directly in the conversation at the moment the investigators encounter them. This works well for clue symbols, maps, portraits, newspaper clippings, letters, diagrams, and other handouts.
+
+![COC KP Host handout example](assets/handout-screenshot.png)
+
 ## Repository Layout
 
 ```text
@@ -28,6 +34,7 @@ The skill has been tested in short scenarios and is currently being tested in lo
 │   └── openai.yaml
 ├── assets/
 │   ├── demo-screenshot.png
+│   ├── handout-screenshot.png
 │   └── icon.svg
 ├── references/
 │   └── gameplay_style.md
