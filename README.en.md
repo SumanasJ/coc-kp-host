@@ -167,18 +167,25 @@ cp -R coc-kp-host ~/.codex/skills/coc-kp-host
 
 After installing or updating, restart the host app so the skill can be rediscovered.
 
-## Usage Examples
+## Usage
+
+The most direct flow is to upload the scenario file, then type:
+
+```text
+/coc-kp-host
+```
+
+You can also trigger it with natural language, for example:
+
+```text
+我上传了一个 COC 模组。请你用 coc-kp-host 当 KP，先私下备团，不要剧透。
+我想用预设调查员，带 1 个 NPC 队友；玩家看到图片或讲义时再展示给我。
+```
+
+If you do not upload a scenario, you can also start an original one-shot:
 
 ```text
 开一个 COC 短团，你当 KP。我用预设调查员，带 1 个 NPC 队友。
-环境允许的话，请配上应景的音乐。
-```
-
-Or:
-
-```text
-我上传一个模组 PDF。你先作为 KP 私下备团，不要剧透。
-玩家看到图片或讲义时再展示给我。
 ```
 
 ## Design Direction
