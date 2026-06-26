@@ -22,8 +22,6 @@ The skill has been tested in short scenarios and full-length published modules (
 
 ## 🎵 Diegetic Music (new)
 
-![Scene music engine](assets/music-engine.svg)
-
 When a setting leans on music — 1920s jazz, a cursed record, a funeral hymn — the KP treats it as a **live element of the scene** instead of flavor text.
 
 During prep, the Keeper builds a small **music cue sheet** that maps each scene mood to a ready-to-play track:
