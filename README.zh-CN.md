@@ -4,7 +4,7 @@ English version: [README.en.md](README.en.md)
 
 一个中文 Call of Cthulhu 风格跑团 KP skill，可用于 Claude Code、Codex 和 ChatGPT。它让模型像守秘人一样主持调查恐怖短团或长团：开团简报、预设调查员卡、NPC 队友、检定与投骰、模组备团、玩家可见讲义展示、场景音乐，以及跨会话连续性记录。
 
-![COC KP Host 效果截图](assets/demo-screenshot.png)
+![COC KP Host 效果截图](assets/demo-screenshot.jpg)
 
 ## 适合做什么
 
@@ -44,7 +44,7 @@ English version: [README.en.md](README.en.md)
 
 模组里如果有玩家可以看到的图片、地图、肖像、剪报、信件、符号或图表，KP 会在角色真正接触到它们的那一刻发出来。
 
-![COC KP Host 材料图示例](assets/handout-screenshot.png)
+![COC KP Host 材料图示例](assets/handout-map-preview.jpg)
 
 文字讲义不会被机械地叫作“Handout 1”或“玩家材料 2”，而会被转成游戏内物件：
 
@@ -55,13 +55,11 @@ English version: [README.en.md](README.en.md)
 
 如果一张图里混有 KP 专用信息，KP 会只裁切/重制安全部分，或改用描述，不直接暴露整张图。
 
-### 4. 场景音乐引擎
+### 4. 场景音乐控制
 
-音乐不只是装饰。这个 skill 会把音乐当成场景里的活元素：热闹酒馆、被诅咒的录音、仪式圣咏、追逐鼓点、突然静音的尸体揭示。
+音乐不只是装饰。这个 skill 会把配乐当成可操作的桌面工具：备团时准备不同情绪的音乐 cue，跑团时根据场景状态播放、切换、静音或恢复，让声音服务节奏，而不是绑定某一个模组。
 
-![场景音乐引擎](assets/music-engine.svg)
-
-备团时会生成一张音乐提示表，例如：
+备团时会生成一张通用音乐提示表，例如：
 
 | 场景情绪 | 配乐策略 |
 | --- | --- |
@@ -69,7 +67,7 @@ English version: [README.en.md](README.en.md)
 | 现实调查 | 低沉、不安、可循环 |
 | 仪式 / 哀悼 | 肃穆、缓慢、带压迫感 |
 | 追逐 / 危机 | 急促、紧张、有推进感 |
-| 恐怖揭示 | 直接静音 |
+| 恐怖揭示 | 直接静音，给玩家留出停顿 |
 
 随附脚本：
 
@@ -81,7 +79,7 @@ python scripts/music.py resume         # 恢复声音
 python scripts/music.py stop           # 停止音乐并关闭当前音乐标签页
 ```
 
-目前音乐控制主要面向 macOS。其它平台会降级为提示用户手动操作。
+目前音乐控制主要面向 macOS。其它平台会降级为提示用户手动操作。README 不再使用单一模组风格的音乐示意图，因为这项能力更适合作为“播放 / 切换 / 静音 / 恢复”的通用工具说明。
 
 ### 5. NPC 队友、全 PC 控制与分队
 
@@ -140,10 +138,11 @@ python scripts/roll.py 2d6
 ├── agents/
 │   └── openai.yaml
 ├── assets/
+│   ├── demo-screenshot.jpg
 │   ├── demo-screenshot.png
+│   ├── handout-map-preview.jpg
 │   ├── handout-screenshot.png
 │   ├── icon.svg
-│   └── music-engine.svg
 ├── references/
 │   ├── carry_audit.md         # 携带物与购买合理性审查
 │   ├── gameplay_style.md      # NPC 队友与信息流规则

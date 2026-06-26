@@ -4,7 +4,7 @@ Chinese main README: [README.md](README.md)
 
 A Chinese Call of Cthulhu-style Keeper skill for Claude Code, Codex, and ChatGPT. It lets the model run investigative horror one-shots or longer campaigns as a Keeper: player briefing, preset investigator cards, NPC teammates, checks and dice, scenario preparation, player-facing handouts, scene music, and continuity records across sessions.
 
-![COC KP Host demo](assets/demo-screenshot.png)
+![COC KP Host demo](assets/demo-screenshot.jpg)
 
 ## What It Is For
 
@@ -44,7 +44,7 @@ The goal is not to publicly summarize the module. The goal is for the Keeper to 
 
 If a module includes player-safe images, maps, portraits, clippings, letters, symbols, or diagrams, the Keeper presents them at the exact moment the investigator encounters them.
 
-![COC KP Host handout example](assets/handout-screenshot.png)
+![COC KP Host handout example](assets/handout-map-preview.jpg)
 
 Text handouts are not exposed as mechanical labels like "Handout 1" or "Player Material 2". They are reframed as in-world objects:
 
@@ -55,13 +55,11 @@ Text handouts are not exposed as mechanical labels like "Handout 1" or "Player M
 
 If an image mixes player-facing and Keeper-only information, the Keeper crops or recreates only the safe part, or describes it instead of exposing the whole image.
 
-### 4. Scene Music Engine
+### 4. Scene Music Control
 
-Music is not just decoration. This skill treats it as a live part of the scene: a lively tavern, a cursed recording, ritual chant, chase percussion, or sudden silence at the discovery of a corpse.
+Music is not just decoration. This skill treats soundtrack playback as an operational table tool: during prep it prepares cue links for different scene moods, and during play it can start, switch, cut, or resume audio so sound supports pacing instead of being tied to one specific module.
 
-![Scene music engine](assets/music-engine.svg)
-
-During prep, the Keeper builds a music cue sheet, for example:
+During prep, the Keeper builds a general-purpose music cue sheet, for example:
 
 | Scene mood | Music strategy |
 | --- | --- |
@@ -69,7 +67,7 @@ During prep, the Keeper builds a music cue sheet, for example:
 | Investigation | low, uneasy, loopable |
 | Ritual / mourning | solemn, slow, oppressive |
 | Chase / crisis | urgent, tense, driving |
-| Horror reveal | hard silence |
+| Horror reveal | hard silence, leaving a deliberate pause |
 
 Included script:
 
@@ -81,7 +79,7 @@ python scripts/music.py resume         # resume sound
 python scripts/music.py stop           # stop music and close the current music tab
 ```
 
-Music control currently targets macOS. On other platforms it degrades gracefully by printing what the user should do manually.
+Music control currently targets macOS. On other platforms it degrades gracefully by printing what the user should do manually. The README no longer uses a single module-specific music diagram, because this feature is better presented as a general play / switch / cut / resume tool.
 
 ### 5. NPC Teammates, Full-PC Control, and Split Parties
 
@@ -140,10 +138,11 @@ When a player claims to carry a valuable, rare, restricted, illegal, or combat-r
 ├── agents/
 │   └── openai.yaml
 ├── assets/
+│   ├── demo-screenshot.jpg
 │   ├── demo-screenshot.png
+│   ├── handout-map-preview.jpg
 │   ├── handout-screenshot.png
 │   ├── icon.svg
-│   └── music-engine.svg
 ├── references/
 │   ├── carry_audit.md         # carry and purchase plausibility audit
 │   ├── gameplay_style.md      # NPC teammate and information-flow rules
