@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="'Helvetica Neue', Arial, 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#100e17"/>
+      <stop offset="1" stop-color="#1b1626"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e6b455"/>
+      <stop offset="1" stop-color="#c98a3a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="560" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="998" height="558" rx="17" fill="none" stroke="#2e2740" stroke-width="2"/>
+
+  <!-- header -->
+  <text x="44" y="62" fill="#f2eef8" font-size="30" font-weight="700">🎷 Scene Music Engine</text>
+  <text x="44" y="92" fill="#9b93ad" font-size="16">场景音乐引擎 · 备团建提示表，开打按场景自动播放，恐怖揭示瞬间掐音</text>
+  <text x="760" y="62" fill="#5fd0c5" font-size="14" font-family="monospace">scripts/music.py</text>
+  <text x="760" y="84" fill="#6b6480" font-size="12" font-family="monospace">macOS · open + osascript</text>
+
+  <line x1="44" y1="112" x2="956" y2="112" stroke="#2e2740" stroke-width="1.5"/>
+
+  <!-- LEFT: cue sheet -->
+  <text x="44" y="150" fill="#e6b455" font-size="17" font-weight="700">音乐提示表 · Cue Sheet</text>
+  <g font-size="15">
+    <!-- rows: mood -> track -->
+    <g transform="translate(44,172)">
+      <rect width="430" height="46" rx="8" fill="#1d1929" stroke="#2e2740"/>
+      <text x="16" y="28" fill="#e8e4ee">入场 · 社交</text>
+      <text x="200" y="28" fill="#e6b455">热爵士 (Doctor Jazz)</text>
+    </g>
+    <g transform="translate(44,226)">
+      <rect width="430" height="46" rx="8" fill="#1d1929" stroke="#2e2740"/>
+      <text x="16" y="28" fill="#e8e4ee">现实调查</text>
+      <text x="200" y="28" fill="#5fd0c5">低回蓝调 (St. Louis Blues)</text>
+    </g>
+    <g transform="translate(44,280)">
+      <rect width="430" height="46" rx="8" fill="#1d1929" stroke="#2e2740"/>
+      <text x="16" y="28" fill="#e8e4ee">葬礼 · 仪式</text>
+      <text x="200" y="28" fill="#5fd0c5">送葬调 (歌单循环)</text>
+    </g>
+    <g transform="translate(44,334)">
+      <rect width="430" height="46" rx="8" fill="#1d1929" stroke="#2e2740"/>
+      <text x="16" y="28" fill="#e8e4ee">追逐 · 审问</text>
+      <text x="200" y="28" fill="#e6b455">紧张垫底 (歌单循环)</text>
+    </g>
+    <g transform="translate(44,388)">
+      <rect width="430" height="46" rx="8" fill="#241218" stroke="#5a2a2c"/>
+      <text x="16" y="28" fill="#e8e4ee">恐怖揭示</text>
+      <text x="200" y="28" fill="#e0524f" font-weight="700">—— 静音 cut ——</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: command flow + waveform -->
+  <text x="520" y="150" fill="#e6b455" font-size="17" font-weight="700">一条命令驱动 · One command</text>
+
+  <!-- command pills -->
+  <g font-family="monospace" font-size="14" font-weight="700">
+    <g transform="translate(520,168)"><rect width="92" height="34" rx="17" fill="#173a36" stroke="#2f6b63"/><text x="46" y="22" fill="#5fd0c5" text-anchor="middle">play</text></g>
+    <g transform="translate(620,168)"><rect width="96" height="34" rx="17" fill="#173a36" stroke="#2f6b63"/><text x="48" y="22" fill="#5fd0c5" text-anchor="middle">switch</text></g>
+    <g transform="translate(724,168)"><rect width="78" height="34" rx="17" fill="#3a1416" stroke="#7a2e30"/><text x="39" y="22" fill="#e0524f" text-anchor="middle">cut</text></g>
+    <g transform="translate(810,168)"><rect width="96" height="34" rx="17" fill="#2a2418" stroke="#5c4e2c"/><text x="48" y="22" fill="#e6b455" text-anchor="middle">resume</text></g>
+    <g transform="translate(520,212)"><rect width="80" height="34" rx="17" fill="#241f2e" stroke="#46405a"/><text x="40" y="22" fill="#c8c0d6" text-anchor="middle">stop</text></g>
+  </g>
+
+  <!-- waveform: sound -> silence at cut -->
+  <text x="520" y="300" fill="#9b93ad" font-size="14">场景声轨 → 揭示瞬间断为寂静</text>
+  <g stroke-linecap="round">
+    <!-- bars (sound) -->
+    <g stroke="#5fd0c5" stroke-width="6">
+      <line x1="528" y1="350" x2="528" y2="386"/>
+      <line x1="548" y1="332" x2="548" y2="404"/>
+      <line x1="568" y1="344" x2="568" y2="392"/>
+      <line x1="588" y1="320" x2="588" y2="416"/>
+      <line x1="608" y1="350" x2="608" y2="386"/>
+      <line x1="628" y1="336" x2="628" y2="400"/>
+      <line x1="648" y1="326" x2="648" y2="410"/>
+      <line x1="668" y1="348" x2="668" y2="388"/>
+      <line x1="688" y1="318" x2="688" y2="418"/>
+      <line x1="708" y1="344" x2="708" y2="392"/>
+    </g>
+    <!-- cut marker -->
+    <line x1="728" y1="306" x2="728" y2="430" stroke="#e0524f" stroke-width="2" stroke-dasharray="4 4"/>
+    <!-- silence (flatline) -->
+    <line x1="736" y1="368" x2="936" y2="368" stroke="#5a2a2c" stroke-width="3"/>
+  </g>
+  <text x="728" y="452" fill="#e0524f" font-size="13" font-weight="700" text-anchor="middle">cut</text>
+  <text x="836" y="452" fill="#6b6480" font-size="13" text-anchor="middle">— 寂静 —</text>
+
+  <!-- footer note -->
+  <line x1="520" y1="488" x2="956" y2="488" stroke="#2e2740" stroke-width="1.5"/>
+  <text x="520" y="516" fill="#9b93ad" font-size="13">备团 WebSearch 核验真实链接 · 长歌单循环垫底 · 切歌不叠音</text>
+  <text x="520" y="538" fill="#6b6480" font-size="13">特殊: 欢快乐不停才是恐怖时，保留音乐，只在揭示那刻 cut</text>
+</svg>
